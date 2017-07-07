@@ -1,0 +1,12 @@
+{
+    "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "int": "xsd:int",
+        "long": "xsd:long",
+        "boolean": "xsd:boolean",
+        "float": "xsd:float",
+        "double": "xsd:double",
+        "dateTime": "xsd:dateTimeStamp",
+        "binary": "xsd:hexBinary"
+    }
+}
