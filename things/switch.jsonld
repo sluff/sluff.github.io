@@ -1,0 +1,17 @@
+{
+  "@context": ["https://sluff.github.io/td/thing-context.jsonld", {"df": "https://sluff.github.io/td/dataformat-context.jsonld"}],
+  "@base": "https://sluff.github.io/things/",
+  "@id": "switch",
+  "name": "switch",
+  "description": "A basic switch with turnedOn and turnedOff Event, and isOn State",
+  "events": {
+    "turnedOn": {},
+    "turnedOff": {}
+  },
+  "states": [
+    {
+      "name": "isOn",
+      "@type": "df:boolean"
+    }
+  ]
+}
