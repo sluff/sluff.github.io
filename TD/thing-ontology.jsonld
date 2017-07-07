@@ -1,0 +1,78 @@
+{ "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "std": "http://sluff.github.io/thing-ontology.jsonld#",
+    "defines": {
+       "@reverse": "rdfs:isDefinedBy"
+    },
+    "propertyOf": { 
+        "@id": "rdfs:domain",
+        "@type": "@id"
+     },
+    "propertyOn": { 
+        "@id": "rdfs:range",
+        "@type": "@id"
+     }
+  },
+  "@id": "std:",
+  "@type": "owl:Ontology",
+  "defines": [
+      { "@id": "std:params",
+        "@type": "owl:ObjectProperty",
+        "rdfs:label": "Parameters",
+        "rdfs:comment": "Collection of Parameters",
+        "propertyOf": "std:Interaction",
+        "propertyOn": "std:Param"
+      },
+      { "@id": "std:actions",
+        "@type": "owl:ObjectProperty",
+        "rdfs:label": "actions",
+        "rdfs:comment": "Collection of Actions",
+        "propertyOf": "std:ThingDescriptor",
+        "propertyOn": "std:Action"
+      },
+      { "@id": "std:events",
+        "@type": "owl:ObjectProperty",
+        "rdfs:label": "events",
+        "rdfs:comment": "Collection of Events",
+        "propertyOf": "std:ThingDescriptor",
+        "propertyOn": "std:Events"
+      },
+      { "@id": "std:states",
+        "@type": "owl:ObjectProperty",
+        "rdfs:label": "states",
+        "rdfs:comment": "Collection of States",
+        "propertyOf": "std:ThingDescriptor",
+        "propertyOn": "std:Param"
+      },
+      { "@id": "std:ThingDescriptor",
+        "@type": "owl:Class",
+        "rdfs:label": "ThingDescriptor",
+        "rdfs:comment": "An JSON-LD file used to describe Thing"
+      },
+      { "@id": "std:Param",
+        "@type": "owl:Class",
+        "rdfs:label": "Param",
+        "rdfs:comment": "Parameter for Interaction and States"
+      },
+      { "@id": "std:Interaction",
+        "@type": "owl:Class",
+        "rdfs:label": "Interaction",
+        "rdfs:comment": "Interaction for thing"
+      },
+      { "@id": "std:Event",
+        "@type": "owl:Class",
+        "rdfs:subClassOf": "std:Interaction",
+        "rdfs:label": "Event",
+        "rdfs:comment": "An Event which a thing could emit"
+      },
+      { "@id": "std:Action",
+        "@type": "owl:Class",
+        "rdfs:subClassOf": "std:Interaction",
+        "rdfs:label": "Action",
+        "rdfs:comment": "An performable action for a thing"
+      }
+  ]
+}
+  
