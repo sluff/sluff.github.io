@@ -5,25 +5,19 @@
         "std": "http://sluff.github.io/thing-ontology.jsonld#",
         "name": "rdfs:label",
         "description": "rdfs:comment",
-        "Action": "std:Action",
-        "Event": "std:Event",
-        "State": "std:State",
         "actions": {
             "@id": "std:actions",
-            "@type": "Action",
+            "@type": "std:Action",
             "@container": "@index"
-        },
-        "params": {
-            "@id": "std:params"
         },
         "events": {
             "@id": "std:events",
-            "@type": "Event",
+            "@type": "std:Event",
             "@container": "@index"
         },
         "states": {
             "@id": "std:states",
-            "@type": "params",
+            "@type": "std:Param",
             "@container": "@list"
         }
     }
